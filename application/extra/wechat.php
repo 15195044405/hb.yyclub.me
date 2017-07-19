@@ -17,7 +17,7 @@ return [
      */
     'app_id'  => 'wx2492f526d5b5fffd',         // AppID
     'secret'  => '44d8f18198fc25090bc1f0b23f03ba86',     // AppSecret
-    'token'   => 'your-token',          // Token
+    'token'   => '',          // Token
     'aes_key' => '',                    // EncodingAESKey，安全模式下请一定要填写！！！
     /**
      * 日志配置
@@ -40,7 +40,7 @@ return [
      */
     'oauth' => [
         'scopes'   => ['snsapi_userinfo'],
-        'callback' => '/examples/oauth_callback.php',
+        'callback' => '/index/common/oauth_callback',
     ],
     /**
      * 微信支付
