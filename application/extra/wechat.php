@@ -15,10 +15,11 @@ return [
     /**
      * 账号基本信息，请从微信公众平台/开放平台获取
      */
-    'app_id'  => 'wx2492f526d5b5fffd',         // AppID
-    'secret'  => '44d8f18198fc25090bc1f0b23f03ba86',     // AppSecret
-    'token'   => '',          // Token
-    'aes_key' => '',                    // EncodingAESKey，安全模式下请一定要填写！！！
+    'app_id'  => 'wxc88124dd1f746c61',         // AppID
+    'secret'  => '7fc611322c7eeb9eb5bde2784e98b3bf',     // AppSecret
+    'token'   => '9b50290c03aa3f518057c7612f57c453',          // Token
+    'aes_key' => 'fR03VohmD1C8BgJxbtjNdWdQoBTHCJ9ba26ZJnNhCDJ',                    // EncodingAESKey，安全模式下请一定要填写！！！
+
     /**
      * 日志配置
      *
@@ -46,10 +47,10 @@ return [
      * 微信支付
      */
     'payment' => [
-        'merchant_id'        => 'your-mch-id',
-        'key'                => 'key-for-signature',
-        'cert_path'          => 'path/to/your/cert.pem', // XXX: 绝对路径！！！！
-        'key_path'           => 'path/to/your/key',      // XXX: 绝对路径！！！！
+        'merchant_id'        => '1219837801',
+        'key'                => '78aebfcecd95bc8600314c3ee549599d',
+        'cert_path'          => 'hb.yyclub.me/static/wechat/cert/apiclient_cert.pem', // XXX: 绝对路径！！！！
+        'key_path'           => 'hb.yyclub.me/static/wechat/cert/apiclient_key.pem',      // XXX: 绝对路径！！！！
         // 'device_info'     => '013467007045764',
         // 'sub_app_id'      => '',
         // 'sub_merchant_id' => '',

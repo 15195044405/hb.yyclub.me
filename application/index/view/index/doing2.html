@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>开始答题</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.4rem;
+            color: #666;
+            font-family: "Helvetica";
+        }
+
+        li {
+            list-style: none;
+        }
+
+        h2 {
+            /*font: -webkit-control;*/
+            font-size: 1.5rem;
+            font-weight: normal;
+            color: #666;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            -webkit-appearance: none;
+            display: block;
+            float: left;
+        }
+
+        input[type="radio"] {
+            border: 1px solid #999;
+            border-radius: 50%;
+            width: 1.2rem;
+            height: 1.2rem;
+            margin: 6px 10px 0 0;
+            background-color: white;
+        }
+
+        input[type="radio"]:checked {
+            background: url(/static/images/bank_of_chink/radio_checked.png) no-repeat center top / 1.2rem 1.2rem;
+            border: none;
+        }
+
+        input[type="checkbox"] {
+            background: url(/static/images/bank_of_chink/checkbox.png) no-repeat center top / 1.2rem 1.2rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            margin: 6px 10px 0 0;
+        }
+
+        input[type="checkbox"]:checked {
+            background: url(/static/images/bank_of_chink/checkbox_checked.png) no-repeat center top / 1.2rem 1.2rem;
+        }
+
+        .questionnaire {
+            /*padding: 1rem 1.5rem;*/
+            background: url("/static/images/bank_of_chink/doing_bk.png") no-repeat;
+            background-size: 100% 100%;
+            padding: 30% 10% 15% 10%;
+        }
+
+        .questionnaire .content {
+            margin-top: 3rem;
+        }
+
+        .content li {
+            /*float: left;*/
+            /*width: 50%;*/
+            height: 2.2rem;
+            line-height: 2.2rem;
+        }
+
+        .content ul {
+            overflow: hidden;
+            margin: .5rem 0;
+        }
+
+        .content_seven li {
+            width: 100%;
+        }
+
+        .content_other textarea {
+            resize: none;
+            width: 98%;
+            padding-left: 2%;
+            height: 6.4rem;
+            margin-top: 1rem;
+            line-height: 2rem;
+        }
+
+        #submit {
+            width: 50%;
+            height: 4rem;
+            color: #fff;
+            background: url("/static/images/bank_of_chink/button1.png") no-repeat;
+            background-size: 100% 100%;
+            margin: 3.5rem 0 2rem 6.5rem;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="questionnaire">
+    <div class="content content_checkbox">
+        <h2>1.我国发行的储蓄国债品种为______。（多选题）</h2>
+        <ul>
+            <li><input type="checkbox" name="form1[]" value="1-1"><span>A．储蓄国债（凭证式）</span></li>
+            <li><input type="checkbox" name="form1[]" value="1-2"><span>B．储蓄国债（电子式）</span></li>
+            <li><input type="checkbox" name="form1[]" value="1-3"><span>C．记账式国</span></li>
+        </ul>
+        <h2>知识点：按债权记录方式的不同，我国的储蓄国债品种分为储蓄国债（凭证式）和储蓄国债（电子式）两种。</h2>
+    </div>
+
+    <div class="content content_checkbox">
+        <h2>2．储蓄国债的主要特点有______。（多选题）</h2>
+        <ul>
+            <li><input type="checkbox" name="form2[]" value="2-1"><span>A．信用等级高，安全性好</span></li>
+            <li><input type="checkbox" name="form2[]" value="2-2"><span>B．变现灵活，流动性较好</span></li>
+            <li><input type="checkbox" name="form2[]" value="2-3"><span>C．发售网点多，购买方便</span></li>
+            <li><input type="checkbox" name="form2[]" value="2-4"><span>D．收益稳定，利息免税</span></li>
+        </ul>
+        <h2>知识点：目前，储蓄国债和其他个人金融产品相比具有以下几个特点：信用等级高，安全性好；变现灵活，流动性较好；发售网点多，购买方便；收益稳定，利息免税等特点。</h2>
+    </div>
+
+    <div class="content">
+        <h2>3．我国发行的储蓄国债（电子式）销售面值须为______的整数倍。（单选题）</h2>
+        <ul>
+            <li><input type="radio" name="form3" value="3-1"><span>A．十元</span></li>
+            <li><input type="radio" name="form3" value="3-2"><span>B．百元</span></li>
+            <li><input type="radio" name="form3" value="3-3"><span>C．千元</span></li>
+            <li><input type="radio" name="form3" value="3-4"><span>D．万元</span></li>
+        </ul>
+        <h2>知识点：按照《储蓄国债（电子式）管理办法》（财库［2013］7号）规定，储蓄国债按面值向个人发行，销售面值须为100元的整数倍。
+            储蓄国债（电子式）以100元面值单位发行和办理相关业务。</h2>
+    </div>
+    <div class="content">
+        <h2>4．以储蓄国债（电子式）为质押品申请贷款额度的起点为______元，每笔贷款应不超过作为质押品的储蓄国债面额的______。（单选题）
+
+
+        </h2>
+        <ul>
+            <li><input type="radio" name="form4" value="4-1"><span>A．5000元   90%</span></li>
+            <li><input type="radio" name="form4" value="4-2"><span>B．5000元   100%</span></li>
+            <li><input type="radio" name="form4" value="4-3"><span>C．10000元  90%</span></li>
+            <li><input type="radio" name="form4" value="4-4"><span>D．10000元  100%</span></li>
+        </ul>
+        <h2>
+            知识点：按照《储蓄国债（电子式）质押管理暂行办法》(银发[2006]第291号)规定，储蓄国债(电子式)质押贷款额度起点为5000元，每笔贷款额由贷款人根据被质押的储蓄国债预期收益、贷款利率、贷款期限等因素自行确定，但应不超过其作为质押品的储蓄国债面额的100%。</h2>
+    </div>
+    <div class="content">
+        <h2>5、国库机构按照国家______管理体制设立，原则上一级财政设立一级国库。</h2>
+        <ul>
+            <li><input type="radio" name="form5" value="5-1"><span>A.行政</span></li>
+            <li><input type="radio" name="form5" value="5-2"><span>B.金融</span></li>
+            <li><input type="radio" name="form5" value="5-3"><span>C.财政</span></li>
+            <li><input type="radio" name="form5" value="5-4"><span>D.税收</span></li>
+        </ul>
+        <h2>知识点：根据《中华人民共和国预算法》第二章“国库的组织机构”
+            第六条规定，国库机构按照国家财政管理体制设立，原则上一级财政设立一级国库。中央设立总库；省、自治区、直辖市设立分库；省辖市、自治州设立中心支库；县和相当于县的市、区设立支库。</h2>
+    </div>
+    <div class="content">
+        <h2>6、政府的______应当上缴国家金库（以下简称国库），任何部门、单位和个人不得截留、占用、挪用或者拖欠。</h2>
+        <ul>
+            <li><input type="radio" name="form6" value="6-1"><span>A.一般公共预算收入</span></li>
+            <li><input type="radio" name="form6" value="6-2"><span>B.政府性基金预算收入</span></li>
+            <li><input type="radio" name="form6" value="6-3"><span>C.社会保险基金预算收入</span></li>
+        </ul>
+        <h2>知识点：第五十六条 政府的全部收入应当上缴国家金库（以下简称国库），任何部门、单位和个人不得截留、占用、挪用或者拖欠。对于法律有明确规定或者经国务院批准的特定专用资金，可以依照国务院的规定设立财政专户。</h2>
+    </div>
+
+    <button id="submit"></button>
+</div>
+<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+<!--<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script>
+    $("#submit").click(function () {
+        var input = '';
+        $(".content input").each(function (index, element) {
+            if($(this).hasClass('checked') && $(this).val()){
+                input += $(this).attr('name');
+            }
+        });
+        console.log(input);
+        $.post("/index.php/index/index/submit",{data:input},function(result){
+            if(result !== '全对'){
+                alert(result);
+            }else{
+                alert(1);
+            }
+        });
+    })
+    $(function () {
+
+        $(".content input[name^='form']").click(function () {    //input[name='radio'] 单选按钮只要被点击  那么他的选中状态永远都是true
+            if($(this).hasClass('checked')){
+                $(this).removeClass('checked');
+            }else{
+                $(this).addClass('checked');
+            }
+//            $(this).attr('value',$(this).attr('name'));
+//
+//            var contentLen = $(".content").length;
+//            var checkLen = $("div[data-id='checkBox']").length;
+//
+//            checked(contentLen, checkLen);
+        });
+
+//        $(".content input[name^='form']").click(function () {    //input[name='radio'] 单选按钮只要被点击  那么他的选中状态永远都是true
+//            $(this).parent("li").addClass("checked").siblings("li").removeClass("checked").parents(".content").attr("data-id", "checkBox");
+//
+//            var contentLen = $(".content").length;
+//            var checkLen = $("div[data-id='checkBox']").length;
+//
+//            checked(contentLen, checkLen);
+//        });
+//
+//        $(".content_checkbox").each(function () {
+//            var self = $(this);
+//            $(this).find("input[name^='checkbox']").click(function () {
+//                if (this.checked == true) {
+//                    $(this).parent("li").addClass("checked");
+//                } else {
+//                    $(this).parent("li").removeClass("checked");
+//                }
+//
+//                if (self.find("li").hasClass("checked")) {
+//                    self.attr("data-id", "checkBox");
+//                } else {
+//                    self.removeAttr("data-id");
+//                }
+//
+//                var contentLen = $(".content").length;
+//                var checkLen = $("div[data-id='checkBox']").length;
+//
+//                checked(contentLen, checkLen);
+//            });
+//
+//
+//        });
+//
+//        function checked(contentLen, checkLen) {
+//            if (contentLen == checkLen) {
+//                $("#submit").css({"background": "#3b7ded"}).removeAttr("disabled");
+//            } else {
+//                $("#submit").css({"background": "#9f9f9f"}).attr("disabled", "disabled");
+//            }
+//        }
+//
+////        $(".content input[name^='checkbox']").click(function(){
+////            if(this.checked == true){
+////                $(this).parent("li").addClass("checked").parents(".content").attr("data-id","checkBox");
+////            }else{
+////                $(this).parent("li").removeClass("checked");
+////            }
+////
+////            var contentLen = $(".content").length;
+////            var checkLen = $("div[data-id='checkBox']").length;
+////
+////            if(contentLen == checkLen){
+////                $("#submit").css({"background":"#3b7ded"});
+////            }else{
+////                $("#submit").css({"background":"#9f9f9f"});
+////
+////            }
+////        });
+    });
+</script>
+</body>
+</html>

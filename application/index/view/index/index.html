@@ -1,10 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>答题首页</title>
+    <style type="text/css">
+        body{
+            margin: auto;
+        }
+        .div2{
+            display: none;
+        }
+        .a1{
+            position: fixed;
+            display: block;
+            top: 47%;
+            left: 31%;
+            width: 37vw;
+            height: 6vh;
+            /*border: 1px solid red;*/
+        }
+        .a2{
+            position: fixed;
+            display: block;
+            top: 57%;
+            left: 31%;
+            width: 37vw;
+            height: 6vh;
+            /*border: 1px solid red;*/
+        }
+        .a3{
+            position: fixed;
+            display: block;
+            top: 64%;
+            left: 31%;
+            width: 37vw;
+            height: 6vh;
+            /*border: 1px solid red;*/
+         }
+    </style>
 </head>
 <body>
-    初始页面
+<div class="div1">
+    <a class="a1"></a>
+    <a class="a2"></a>
+    <img src="/static/images/bank_of_chink/shouye.png" width="100%" alt="">
+</div>
+<div class="div2">
+    <a class="a3"></a>
+    <img src="/static/images/bank_of_chink/shouyetanchuang.png" width="100%" alt="">
+</div>
 </body>
+<script>
+    $(".a1").click(function () {
+        window.location.href='index.php/index/index/doing';
+    })
+    $(".a2").click(function () {
+        $(".div1").hide();
+        $(".div2").show();
+    })
+    $(".a3").click(function () {
+        $(".div2").hide();
+        $(".div1").show();
+    })
+</script>
 </html>
