@@ -17,6 +17,8 @@ return [
      */
     'app_id'  => 'wxc88124dd1f746c61',         // AppID
     'secret'  => '7fc611322c7eeb9eb5bde2784e98b3bf',     // AppSecret
+//    'app_id'  => 'wx2492f526d5b5fffd',         // AppID
+//    'secret'  => '44d8f18198fc25090bc1f0b23f03ba86',     // AppSecret
     'token'   => '9b50290c03aa3f518057c7612f57c453',          // Token
     'aes_key' => 'fR03VohmD1C8BgJxbtjNdWdQoBTHCJ9ba26ZJnNhCDJ',                    // EncodingAESKey，安全模式下请一定要填写！！！
 
@@ -41,7 +43,7 @@ return [
      */
     'oauth' => [
         'scopes'   => ['snsapi_userinfo'],
-        'callback' => '/index/common/oauth_callback',
+        'callback' => '/hongbao/public/index.php/index/common/oauth_callback',
     ],
     /**
      * 微信支付
@@ -49,8 +51,8 @@ return [
     'payment' => [
         'merchant_id'        => '1219837801',
         'key'                => '78aebfcecd95bc8600314c3ee549599d',
-        'cert_path'          => 'hb.yyclub.me/static/wechat/cert/apiclient_cert.pem', // XXX: 绝对路径！！！！
-        'key_path'           => 'hb.yyclub.me/static/wechat/cert/apiclient_key.pem',      // XXX: 绝对路径！！！！
+        'cert_path'          => '/www/findayi.yyclub.me/hongbao/public/static/wechat/cert/apiclient_cert.pem',
+        'key_path'           => '/www/findayi.yyclub.me/hongbao/public/static/wechat/cert/apiclient_key.pem',
         // 'device_info'     => '013467007045764',
         // 'sub_app_id'      => '',
         // 'sub_merchant_id' => '',
@@ -63,6 +65,6 @@ return [
      */
     'guzzle' => [
         'timeout' => 3.0, // 超时时间（秒）
-        //'verify' => false, // 关掉 SSL 认证（强烈不建议！！！）
+        'verify' => false, // 关掉 SSL 认证（强烈不建议！！！）
     ],
 ];

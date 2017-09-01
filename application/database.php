@@ -15,7 +15,7 @@ return [
     // 服务器地址
     'hostname'        => '139.196.238.37',
     // 数据库名
-    'database'        => 'youyueclub',
+    'database'        => 'db_findayi',
     // 用户名
     'username'        => 'root',
     // 密码

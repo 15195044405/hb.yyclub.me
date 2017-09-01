@@ -1,65 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <meta name="viewport"
+          content="height=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <title>答题首页</title>
     <style type="text/css">
-        body{
+        body {
             margin: auto;
         }
-        .div2{
+
+        .div2 {
             display: none;
         }
-        .a1{
-            position: fixed;
+
+        .a1 {
+            position: absolute;
             display: block;
-            top: 47%;
+            top: 53%;
             left: 31%;
             width: 37vw;
-            height: 6vh;
+            height: 7vh;
             /*border: 1px solid red;*/
         }
-        .a2{
-            position: fixed;
+
+        .a2 {
+            position: absolute;
             display: block;
-            top: 57%;
+            top: 64.5%;
             left: 31%;
             width: 37vw;
-            height: 6vh;
+            height: 7vh;
             /*border: 1px solid red;*/
         }
-        .a3{
-            position: fixed;
+
+        .a3 {
+            position: absolute;
             display: block;
-            top: 64%;
+            top: 72.5%;
             left: 31%;
             width: 37vw;
-            height: 6vh;
+            height: 8vh;
             /*border: 1px solid red;*/
-         }
+        }
     </style>
 </head>
 <body>
 <div class="div1">
     <a class="a1"></a>
     <a class="a2"></a>
-    <img src="/static/images/bank_of_chink/shouye.png" width="100%" alt="">
+    <img src="/hongbao/public/static/images/bank_of_chink/shouye.png" width="100%" alt="">
 </div>
 <div class="div2">
     <a class="a3"></a>
-    <img src="/static/images/bank_of_chink/shouyetanchuang.png" width="100%" alt="">
+    <img src="" width="100%" alt="">
 </div>
+<input class="level" type="hidden" value="{$level}">
+<input class="time" type="hidden" value="{$time}">
 </body>
 <script>
+    window.alert = function (name) {
+        var iframe = document.createElement("IFRAME");
+        iframe.style.display = "none";
+        iframe.setAttribute("src", 'data:text/plain,');
+        document.documentElement.appendChild(iframe);
+        window.frames[0].window.alert(name);
+        iframe.parentNode.removeChild(iframe);
+    }
     $(".a1").click(function () {
-        window.location.href='index.php/index/index/doing';
+        window.location.href = '/hongbao/public/index.php/index/index/doing/level/' + $(".level").val();
     })
     $(".a2").click(function () {
         $(".div1").hide();
+        // 时间判断 展示不同的图片
+        var time = $(".time").val();
+        var level = $(".level").val();
+        if (level === 's9aKw8') {
+            // 中行普通 8月10号 整点
+            $(".div2 img").attr('src', '/hongbao/public/static/images/bank_of_chink/shouyetanchuang1.png');
+        } else if (level === 'BOTX3B') {
+            // 中行同级 8月10号 整点
+            $(".div2 img").attr('src', '/hongbao/public/static/images/bank_of_chink/shouyetanchuang2.png');
+        } else if (level === 'x8uxk5') {
+            // 人行上级 8月11号 非整点
+            $(".div2 img").attr('src', '/hongbao/public/static/images/bank_of_chink/shouyetanchuang3.png');
+        } else {
+            $(".div2 img").attr('src', '/hongbao/public/static/images/bank_of_chink/shouyetanchuang1.png');
+        }
         $(".div2").show();
     })
     $(".a3").click(function () {
